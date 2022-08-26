@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"go-fiber-tutorial/controller"
+	"go-fiber-tutorial/routes"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -19,7 +19,7 @@ func main() {
 	})
 
 	// Controller users
-	controller.GetUsers(app.Group("/api/v1/"))
+	routes.UserRoutes(app.Group("/api/v1/"))
 
 	app.Listen(":8001")
 }

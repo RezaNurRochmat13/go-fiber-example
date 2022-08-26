@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"go-fiber-tutorial/controller"
 
 	"github.com/gofiber/fiber/v2"
 )
@@ -16,6 +17,9 @@ func main() {
 			"message": "Service is running!",
 		})
 	})
+
+	// Controller users
+	controller.GetUsers(app.Group("/api/v1/"))
 
 	app.Listen(":8001")
 }

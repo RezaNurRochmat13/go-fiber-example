@@ -7,3 +7,9 @@ func GetUsers(c *fiber.Ctx) error {
 		"message": "All users",
 	})
 }
+
+func GetSingleUsers(c *fiber.Ctx) error {
+	return c.JSON(fiber.Map{
+		"message": "Single users",
+	})
+}
